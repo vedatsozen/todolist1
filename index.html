@@ -50,7 +50,7 @@ newTaskDiv.innerHTML = newTask;
 newTaskDiv.addEventListener("click", function() {
 newTaskDiv.classList.add("chosen");
 document.getElementById("delete").classList.add("show");
-document.getElementById("edit").classList.add("show");
+
 
 })
 
@@ -66,7 +66,7 @@ chosentasks.forEach(task => {
 task.remove();
 taskArray.pop();
 document.getElementById("delete").classList.remove("show");
-document.getElementById("edit").classList.remove("show");
+
 });
 
 }
