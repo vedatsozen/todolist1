@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO LIST</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>TO DO LIST / EASY TO CREATE NEW TASKS</h1>
+<p>To delete any task click on it and delete all tasks you want to click delete button.</p>
+<input type="text" id="inputid">
+<button type="button" onclick="addnew()">Add New</button>
+
+<img id="delete" src="delete.png" onclick="deletetasks()">
+
+<div id="container"></div>
+</body>
+<script>
+
+const taskArray = [];
+
+function showall() {
+
+for ( let i=0; i<taskArray.length;i++) {
+
+document.getElementById("container").innerHTML += taskArray[i] + "<br>";
+
+}
+
+}
+
+function addnew() {
+
+const container = document.getElementById("container");
+const newTask = document.getElementById("inputid").value;
+
+if (newTask == "" ) { alert("Please enter a task"); }
+
+else {
+
+taskArray.push(newTask);
+const newTaskDiv = document.createElement("div");
+newTaskDiv.classList.add("newtask");
+container.appendChild(newTaskDiv);
+const indexNo = taskArray.indexOf(newTask);
+newTaskDiv.innerHTML = newTask;
+
+newTaskDiv.addEventListener("click", function() {
+newTaskDiv.classList.add("chosen");
+document.getElementById("delete").classList.add("show");
+document.getElementById("edit").classList.add("show");
+
+})
+
+}
+
+}
+
+function deletetasks() {
+
+const chosentasks = document.querySelectorAll('.chosen');
+
+chosentasks.forEach(task => {
+task.remove();
+taskArray.pop();
+document.getElementById("delete").classList.remove("show");
+document.getElementById("edit").classList.remove("show");
+});
+
+}
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>

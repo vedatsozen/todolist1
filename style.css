@@ -1,0 +1,120 @@
+body {
+    margin:auto;
+    margin-top:10px;
+    padding:0;
+    box-sizing:border-box;
+    text-align: center;
+    background-color: #ffb703;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+html {
+    user-select: none;
+}
+
+h1 {
+    font-size: 40px;
+    margin:auto;
+
+}
+
+p {
+    font-weight: bold;
+    font-size: 12px;
+    margin: auto;
+    margin-top: 0px;
+}
+
+input {
+    margin:auto;
+    margin-top: 10px;
+    height:20px;
+    width: 400px;
+    font-size:16px;
+    font-weight: bold;
+    padding:5px;
+    border-radius: 3px;
+   
+    border:none;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 10px black;
+}
+
+button {
+    margin:auto;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    padding: 5px;
+}
+
+#container {
+    margin:auto;
+    height: fit-content;
+    width: 400px;
+    padding:5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap:5px;
+    
+}
+
+
+
+.newtask {
+    font-size: 16px;
+    font-weight: bold;
+    color:white;
+    background-color:coral;
+    min-width: 400px;
+    max-width:fit-content;
+    box-sizing:border-box;
+    padding:7px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    letter-spacing: 3px;
+    cursor: pointer;
+    border-radius: 3px;
+    box-shadow: 0 0 10px black;
+}
+
+.chosen {
+    background-color:black;
+    cursor: pointer;
+}
+
+img#delete {
+    margin:auto;
+    margin-top:10px;
+    height: 30px;
+    width: 30px;
+    visibility: hidden;
+
+}
+
+
+img#delete.show {
+    margin:auto;
+    margin-top:10px;
+    height: 30px;
+    width: 30px;
+    visibility: visible;
+    cursor: pointer;
+}
+
+.chosen {
+    text-decoration:line-through;
+}
